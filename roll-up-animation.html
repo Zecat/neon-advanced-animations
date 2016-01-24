@@ -15,7 +15,7 @@
       node = config.node;
       this._effect = new KeyframeEffect(node, [
         { height: node.getBoundingClientRect().height + 'px' },
-        { height: 0 }
+        { height: (config.to || 0) + 'px' }
       ], this.timingFromConfig(config));
       
       return this._effect;
